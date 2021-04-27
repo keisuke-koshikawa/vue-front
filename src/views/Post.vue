@@ -17,6 +17,7 @@ export default defineComponent({
   },
 
   setup () {
+    const posts = ref([] as Post[])
     const onGetPosts = async () => {
       await getPosts()
         .then((res) => {
