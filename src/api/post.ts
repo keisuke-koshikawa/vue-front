@@ -1,5 +1,5 @@
 import Client from '@/api/client'
-import { Post, PostForRequest } from '@/types/post'
+import { Post } from '@/types/post'
 import {
   getAuthDataFromStorage
 } from '@/utils/auth-data'
@@ -15,7 +15,7 @@ export const getPosts = async () => {
     })
 }
 
-export const createPost = async (formData: PostForRequest) => {
+export const createPost = async (formData: FormData) => {
   return await Client.post(
     '/posts', formData,
     {
